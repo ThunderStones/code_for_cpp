@@ -1,22 +1,8 @@
-#include <iostream>
 #include <cmath>
 #include "mytriangle.h"
 using namespace std;
 
-int main()
-{
-    double a, b, c;
-    cin >> a >> b >> c;
-    if (isValid(a,b,c))
-    {
-        cout << area(a,b,c);
-    }
-    else
-    {
-        cout << "invaild triangle";
-    }
-    
-}
+
 
 bool isValid(double side1, double side2, double side3)
 {
