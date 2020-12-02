@@ -4,7 +4,7 @@
         {
             "type": "process",
             "label": "task g++",    
-            "command": "C:\\Study\\cpp\\Code\\mingw64\\bin\\g++.exe",  //改成自己的路径
+            "command": "${workspaceFolder}\\mingw64\\bin\\g++.exe",  //改成自己的路径
             "args": [
                 "-g",
                 "${file}",
@@ -12,7 +12,7 @@
                 "${fileDirname}\\${fileBasenameNoExtension}.exe"
             ],
             "options": {
-                "cwd": "C:\\Study\\cpp\\Code\\mingw64\\bin"   //改成自己的路径
+                "cwd": "${workspaceFolder}\\mingw64\\bin"   //改成自己的路径
             },
             "problemMatcher": [
                 "$gcc"
