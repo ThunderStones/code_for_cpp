@@ -1,25 +1,25 @@
 #include <iostream>
 using namespace std;
-// class Time // å®šä¹‰Timeç±»
+// class Time // ¶¨ÒåTimeÀà
 // {
-//     public: // æ•°æ®æˆå‘˜ä¸ºå…¬ç”¨çš„
+//     public: // Êý¾Ý³ÉÔ±Îª¹«ÓÃµÄ
 //         int hour;
 //         int minute;
 //         int sec;
 // };
 // int main()
 // {
-//     Time t1;        //å®šä¹‰t1ä¸ºTimeç±»å¯¹è±¡
-//     cin >> t1.hour; //è¾“å…¥è®¾å®šçš„æ—¶é—´
+//     Time t1;        //¶¨Òåt1ÎªTimeÀà¶ÔÏó
+//     cin >> t1.hour; //ÊäÈëÉè¶¨µÄÊ±¼ä
 //     cin >> t1.minute;
 //     cin >> t1.sec;
-//     cout << t1.hour << ';' << t1.minute << 'ï¼š' << t1.sec << endl;
+//     cout << t1.hour << ';' << t1.minute << '£º' << t1.sec << endl;
 //     return 0;
 // }
 
-class Time // å®šä¹‰Timeç±»
+class Time // ¶¨ÒåTimeÀà
 {
-    private: // æ•°æ®æˆå‘˜ä¸ºå…¬ç”¨çš„
+    private: // Êý¾Ý³ÉÔ±Îª¹«ÓÃµÄ
         int hour;
         int minute;
         int sec;

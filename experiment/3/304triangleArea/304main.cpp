@@ -6,6 +6,7 @@ using namespace std;
 int main()
 {
     double a, b, c;
+    cout << "input a b c" << endl;
     cin >> a >> b >> c;
     if (isValid(a,b,c))
     {

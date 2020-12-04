@@ -1,9 +1,9 @@
 #include <iostream>
 
 using namespace std;
-class Student              //ç±»å£°æ˜
+class Student              //ÀàÉùÃ÷
 {
-    public:                   //å…¬ç”¨æˆå‘˜å‡½æ•°åŸå‹å£°æ˜
+    public:                   //¹«ÓÃ³ÉÔ±º¯ÊıÔ­ĞÍÉùÃ÷
         void display();
         void setValue()
         {
@@ -12,7 +12,7 @@ class Student              //ç±»å£°æ˜
             cin.ignore();
             cout << "input your name: ";
             cin.getline(name, 20);
-            cout << "input your sex: ";
+            cout << "input your sex: (m for man ,w for woman)";
             cin >> sex;
         }
     private:
