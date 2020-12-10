@@ -4,7 +4,7 @@ using namespace std;
 
 int main()
 {
-	int totle, min(0);
+	int totle, min(1000);
 	cin >> totle;
 	for	(int i = 1; i <= totle; i++)
 	{
