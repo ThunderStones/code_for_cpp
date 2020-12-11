@@ -8,13 +8,13 @@ int main()
     {
         flag[i] = true;
     }
-    for (int i = 1; i < 100; i++)
+    for (int i = 2; i <= 100; i++)
     {
-        for (int k = i; k < 100; k += i + 1)
+        for (int k = i - 1; k < 100; k += i + 1)
         {
             flag[k] = !flag[k];
         }
-        
+
     }
     for (int i = 0; i < 100; i++)
     {
