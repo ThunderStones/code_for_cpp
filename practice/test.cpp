@@ -1,18 +1,15 @@
 #include <iostream>
+#include <stdio.h>
 using namespace std;
 
 int main()
 {
-    int day;
-    for (int i = 1; i < 8; i++)
+    char c[10] = "asdsdg", a[10], b[10] = "sdffdhgf";
+    char* pstr = gets(a);
+    cout << c << endl;
+    for (int i = 0; i < 50; i++)
     {
-        int a, b, max(0);
-        cin >> a >> b;
-        if (a + b > max)
-        {
-            max = a + b;
-            day = i;
-        }
+        cout << (pstr[i] == '\0' ? 1 : 0);
     }
-    cout << day;
+    
 }
