@@ -13,7 +13,7 @@ int main()
         dot[i] = false;
     }
     
-    for (int i = 0; i < n; i++)
+    while (count < n * n)
     {
         cin >> num;
         for (int j = count; j < count + num; j++)
@@ -32,4 +32,4 @@ int main()
         }
         cout << endl;
     }    
-}
+} 
