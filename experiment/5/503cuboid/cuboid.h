@@ -1,11 +1,11 @@
-class cuboid
+class Cuboid
 {
 	private:
 		int length;
 		int width;
 		int height;
 	public:
-		cuboid(int, int, int);
+		// Cuboid(int, int, int);
 		void setValue();
 		int getVolume();
 		

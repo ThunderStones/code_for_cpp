@@ -2,6 +2,7 @@
 
 int main()
 {
-	cuboid cuboid1;
-	cuboid.	setValue();
+	Cuboid cuboid1;
+	cuboid1.setValue();
+	cout << cuboid1.getVolume();
 }

@@ -2,19 +2,24 @@
 #include <iostream>
 using namespace std;
 
-cubiod(int a, int b, int c)
-{
-	length = a;
-	width = b;
-	height = c;
-}
+// Cuboid::Cuboid(int a, int b, int c)
+// {
+// 	length = a;
+// 	width = b;
+// 	height = c;
+// }
 
-void setValue()
+void Cuboid::setValue()
 {
 	cout << "input length:";
-	cin >> cubiod.length;
+	cin >> length;
 	cout << "input width:";
-	cin >> cubiod.width;
-	cout << input height;
-	cin >> cubiod.height;
+	cin >> width;
+	cout << "input height";
+	cin >> height;
+}
+
+int Cuboid::getVolume()
+{
+	return height * width * length;
 }
