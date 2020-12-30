@@ -15,7 +15,7 @@ int main()
 		ca = cb;
 		cb = temp;
 	}
-	cout << "GCD" << cb << endl;
-	cout << "LCM" << a * b / cb; 
+	cout << "GCD=" << cb << endl;
+	cout << "LCM=" << a * b / cb; 
 
 }

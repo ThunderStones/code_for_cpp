@@ -30,8 +30,8 @@ int main()
 		}
 		cin.get(a);
 	}
-	cout << "字母:" << charCount << endl
-		<< "数字:" << numCount << endl  
-		<< "空格:" << spaceCount << endl 
-		<< "其他:" << otherCount << endl;
+	cout << "char :" << charCount << endl
+		<< "number :" << numCount << endl  
+		<< "space :" << spaceCount << endl 
+		<< "other :" << otherCount << endl;
 }

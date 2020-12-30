@@ -1,15 +1,19 @@
 #include <iostream>
-#include <stdio.h>
+#include <algorithm>
 using namespace std;
 
 int main()
 {
-    char c[10] = "asdsdg", a[10], b[10] = "sdffdhgf";
-    char* pstr = gets(a);
-    cout << c << endl;
-    for (int i = 0; i < 50; i++)
+    int n(9);
+    int x[100];
+    scanf("%d", &n);
+    // fflush(stdin);
+    for (int i = 0; i < n; i++)
     {
-        cout << (pstr[i] == '\0' ? 1 : 0);
+        scanf("%d", &x[i]);
+        // fflush(stdin);
     }
-    
+    sort(x, x + n);
+    printf("%d", x[0]);
+    return 0;
 }

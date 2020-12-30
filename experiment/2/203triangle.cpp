@@ -12,6 +12,6 @@ int main()
 	}
 	else
 	{
-		cout << "不能构成三角形"; 
+		cout << "not a triangle"; 
 	}
 }
