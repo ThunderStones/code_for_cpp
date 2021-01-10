@@ -1,0 +1,24 @@
+#include <iostream>
+#include "shape.cpp"
+using namespace std;
+double Area(Shape * geo)
+{
+    return (*geo).getArea();
+}
+
+int main()
+{
+    Shape * arr[5];
+    arr[0] = new Circle(10.2);
+    arr[1] = new Square(3);
+    arr[2] = new Rectangle(3, 4);
+    arr[3] = new Trapezoid(2.0, 4.5, 2);
+    arr[4] = new Triangle(4, 5, 6);
+    double sum(0);
+    for (int i = 0; i < 5; i++)
+    {
+        cout << Area(arr[i]) << endl;
+        sum += Area(arr[i]);
+    }
+    cout << sum;
+}
