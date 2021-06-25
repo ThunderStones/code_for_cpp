@@ -1,11 +1,6 @@
 #include <iostream>
 #include "shape.cpp"
 using namespace std;
-double Area(Shape * geo)
-{
-    return (*geo).getArea();
-}
-
 int main()
 {
     Shape * arr[5];
@@ -17,8 +12,8 @@ int main()
     double sum(0);
     for (int i = 0; i < 5; i++)
     {
-        cout << Area(arr[i]) << endl;
-        sum += Area(arr[i]);
+        cout << arr[i]->getArea() << endl;
+        sum += arr[i]->getArea();
     }
     cout << sum;
 }

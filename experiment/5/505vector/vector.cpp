@@ -14,9 +14,7 @@ vector<T> intersection(const vector<T>& v1, const vector<T>& v2)
                 v.push_back(v1[i]);
                 break;
             }
-            
         }
-        
     }
     return v;
 }

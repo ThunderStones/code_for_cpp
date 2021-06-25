@@ -1,6 +1,9 @@
+//Time out
+
 #include <iostream>
 #include <string>
-
+// #include <cctype>
+#include <algorithm>
 using namespace std;
 
 string * split(string str, int size)
@@ -20,9 +23,12 @@ string * split(string str, int size)
 int main()
 {
     string word, sen;
-    int count(0), sum(-1), min(-1);
+    int count(0), sum(0), min(-1);
     cin >> word;
+    cin.ignore();
     getline(cin, sen);
+    transform(word.begin(), word.end(), word.begin(), ::tolower);
+    transform(sen.begin(), sen.end(), sen.begin(), ::tolower);
     int size(0);
     for (int i = 0; i < sen.length(); i++)
     {
@@ -36,17 +42,17 @@ int main()
     string * pstr = split(sen, size);
     for (int i = 0; i < size; i++)
     {
-        sum++;
+        
         if (word == pstr[i])
         {
             count++;
-            if (sum == -1)
+            if (min == -1)
             {
                 min = sum;
             }
             
         }
-        sum += pstr[i].length();
+        sum += pstr[i].length() + 1;
     }
     if (min == -1)
     {
@@ -54,7 +60,7 @@ int main()
     }
     else
     {
-        cout << min << count;
+        cout << count << ' ' << min;
     }
     
 }

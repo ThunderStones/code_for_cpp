@@ -3,12 +3,10 @@ using namespace std;
 
 int main()
 {
-	//cout << 'a';
 	int a, b;
 	cin >> a >> b;
 	int ca = max(a, b);
 	int cb = min(a, b);
-	//cout << b << endl;
 	while (ca % cb != 0)
 	{
 		int temp = ca % cb;
@@ -17,5 +15,4 @@ int main()
 	}
 	cout << "GCD=" << cb << endl;
 	cout << "LCM=" << a * b / cb; 
-
 }

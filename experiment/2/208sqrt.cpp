@@ -13,7 +13,7 @@ int main()
         {
             xn = xn1;
             xn1 = 0.5 * (xn + a / xn);
-        } while (abs(xn1 - xn) > 1e-15);
+        } while (abs(xn1 - xn) > 1.0e-17);
         cout << fixed << setprecision(15) << xn1;
     }
     else

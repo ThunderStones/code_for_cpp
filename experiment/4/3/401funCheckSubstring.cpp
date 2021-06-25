@@ -23,12 +23,10 @@ int indexOf(const char* s1, const char* s2)
                 index = i;
                 return index;
             }
-            
         }
         s2++;
     }
     return index;
-    
 }
 
 int main()

@@ -1,14 +1,6 @@
 #include "cuboid.h"
 #include <iostream>
 using namespace std;
-
-// Cuboid::Cuboid(int a, int b, int c)
-// {
-// 	length = a;
-// 	width = b;
-// 	height = c;
-// }
-
 void Cuboid::setValue()
 {
 	cout << "input length:";

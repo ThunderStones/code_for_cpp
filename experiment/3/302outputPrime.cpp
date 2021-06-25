@@ -1,5 +1,6 @@
 #include <iostream>
 #include <cmath>
+#include <iomanip>
 using namespace std;
 
 bool isPrime(int);
@@ -11,7 +12,7 @@ int main()
     {
         if (isPrime(i))
         {
-            cout << i << ' ';
+            cout << setw(4) << i << ' ';
             count++;
             if (!(count % 10))
                 cout << endl;

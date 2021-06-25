@@ -11,5 +11,4 @@ int main()
         day += 1;
     } while (count + init <= 100);
     cout << count * 0.8 / day;
-    //<< endl << count << " " << day;
 }

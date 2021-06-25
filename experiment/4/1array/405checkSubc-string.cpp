@@ -15,8 +15,10 @@ int indexOf(const char s1[], const char s2[])
 		for (int j = 0; j < len1; j++)
 		{
 			if (s1[j] != s2[i + j])
-			flag = false;
-			break;
+			{
+				flag = false;
+				break;
+			}
 		}
 		if (flag)
 		{

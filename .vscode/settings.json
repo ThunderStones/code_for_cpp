@@ -72,6 +72,7 @@
         "typeinfo": "cpp",
         "valarray": "cpp",
         "rope": "cpp",
-        "slist": "cpp"
+        "slist": "cpp",
+        "stdlib.h": "c"
     }
 }
