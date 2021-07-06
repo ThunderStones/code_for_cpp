@@ -8,9 +8,9 @@
             "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${workspaceFolder}",
+            "cwd": "${workspaceRoot}",
             "environment": [],
-            "externalConsole": false,      //修改此项，让其弹出终端
+            "externalConsole": false, //修改此项，让其弹出终端
             "MIMode": "gdb",
             "miDebuggerPath": "${env:UserPath}\\Documents\\mingw64\\bin\\gdb.exe",
             "setupCommands": [
