@@ -30,7 +30,7 @@ String::~String()
 {
 	if (pString != nullptr)
 	{
-		delete []pString;
+		delete [] pString;
 	}
 }
 
