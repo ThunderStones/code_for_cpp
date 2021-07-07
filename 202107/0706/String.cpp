@@ -47,3 +47,18 @@ String::String(const String& str)
 		}
 	}	
 }
+
+std::ostream& operator<<(std::ostream& out, const String& str)
+{
+	out << str.pString;
+	return out;
+}
+
+std::istream& operator>>(std::istream& in, String& str)
+{
+	char buffer[128];
+	in >> buffer;
+	str = buffer;
+	return in;
+
+}

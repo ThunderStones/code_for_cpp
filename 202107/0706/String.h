@@ -1,4 +1,5 @@
 #pragma once
+#include <iostream>
 class String
 {
 private:
@@ -8,5 +9,6 @@ public:
 	String(const char* charList);
 	~String();
 	String(const String& str);
+	friend std::ostream& operator<<(std::ostream& out, const String& str);
+	friend std::istream& operator>>(std::istream& in, String& str);
 };
-
