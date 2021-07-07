@@ -2,9 +2,8 @@
 class String
 {
 private:
-
-public:
 	char* pString;
+public:
 	String();
 	String(const char* charList);
 	~String();

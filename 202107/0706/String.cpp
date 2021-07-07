@@ -16,7 +16,7 @@ String::String(const char* charList)
 	if (charList != nullptr)
 	{
 		size_t len = strlen(charList);
-		pString = new char(len + 1);
+		pString = new char[len + 1];
 		if (pString != nullptr)
 		{
 			strcpy_s(pString, len + 1, charList);
@@ -30,7 +30,7 @@ String::~String()
 {
 	if (pString != nullptr)
 	{
-		delete []pString;
+		delete [] pString;
 	}
 }
 
@@ -40,11 +40,10 @@ String::String(const String& str)
 	if (str.pString != nullptr)
 	{
 		size_t len = strlen(str.pString);
-		pString = new char(len + 1);
+		pString = new char[len + 1];
 		if (pString != nullptr)
 		{
 			strcpy_s(pString, len + 1, str.pString);
 		}
-		
 	}	
 }
