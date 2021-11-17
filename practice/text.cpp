@@ -1,11 +1,17 @@
-#include "../1.h"
-#include <iomanip>
-#include <string>
+#include <iostream>
 using namespace std;
-int main()
+struct Node
 {
-    cout << showpoint << 3.3600 << ' ' << 6546.5 << endl;
-    string str = "Luogugugu";
-    cout << str.find("gu");
-    
+    char name[20];
+    int score;
+    Node *pnext;
+};
+
+int main(int argc, char const *argv[])
+{
+    Node * a, b;
+    a = new Node;
+    cin >> b.score >> a->score;
+    cout << a->score << endl << b.score;
+    return 0;
 }
