@@ -1,17 +1,15 @@
 #include <iostream>
-using namespace std;
-struct Node
+class A
 {
-    char name[20];
-    int score;
-    Node *pnext;
+public:
+    int a;
 };
 
-int main(int argc, char const *argv[])
+class B : public A
 {
-    Node * a, b;
-    a = new Node;
-    cin >> b.score >> a->score;
-    cout << a->score << endl << b.score;
-    return 0;
-}
+public:
+    int a;
+    void func() {
+        std::cout << A::a << B::a;
+    }
+};

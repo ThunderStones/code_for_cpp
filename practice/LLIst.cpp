@@ -75,8 +75,7 @@ void LinkedList::insertNode(Node& node, int pos)
 {
     pos = pos > count ? count : pos;
     pos = pos < 0 ? 0 : pos;
-    Node * p = new Node;
-    p = phead->pnext;
+    Node * p = nullptr;
     for (int i = 0; i < pos; i++)
     {
         p = p->pnext;
