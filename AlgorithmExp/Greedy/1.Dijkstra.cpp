@@ -24,8 +24,18 @@ int * dijkstra(int **matrix, int size)
     for (int i = 1; i < size; i++)
     {
         //find min distance in blue set
-        int min = i;
-        for (int j = i + 1; j < size; j++)
+        int min;
+        for (int j = 0; j < size; j++)
+        {
+            if (blue[j] == 1)
+            {
+                min = j;
+                break;
+            }
+            
+        }
+        
+        for (int j = min; j < size; j++)
             if (blue[j] == 1 && distance[j] != -1 && distance[j] < distance[min])
                 min = j;
 

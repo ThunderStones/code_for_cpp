@@ -52,6 +52,6 @@ int scheduling(int jobCount, int machineCount, int time[])
 int main(int argc, char const *argv[])
 {
     int time[7] = {2, 14, 4, 16, 6, 5, 3};
-    cout << scheduling(7, 3, time);
+    cout << "作业数 7\n机器数 3\n时间数组 2 14 4 16 6 5 3\n所需时间 " << scheduling(7, 3, time) << endl;
     return 0;
 }
