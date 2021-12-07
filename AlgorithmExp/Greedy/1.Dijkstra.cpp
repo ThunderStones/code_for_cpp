@@ -1,4 +1,7 @@
-int dijkstra(int ** matrix, int size){
+#include <iostream>
+
+int dijkstra(int **matrix, int size)
+{
     int red[size] = {0}, blue[size] = {0};
     int distance[size], parent[size];
 
@@ -15,7 +18,47 @@ int dijkstra(int ** matrix, int size){
         else
             parent[i] = 0;
     }
-    
+
     //
+    for (int i = 1; i < size; i++)
+    {
+        //find min distance in blue set
+        int min = i;
+        for (int j = i + 1; j < size; j++)
+            if (blue[j] == 1 && distance[j] != -1 && distance[j] < distance[min])
+                min = j;
+
+        // add the set into red set;
+        red[min] = 1;
+        blue[min] = 0;
+
+        //relax
+        for (int j = 1; j < size; j++)
+        {
+            if (matrix[min][j] != -1 && min != j)
+                if (distance[j] == -1 || distance[j] > distance[min] + matrix[min][j])
+                {
+                    distance[j] = distance[min] + matrix[min][j];
+                    parent[j] = min;
+                }
+        }
+    }
+}
+
+int main(int argc, char const *argv[])
+{
+    int graph[5][5] = {{0, 10, -1, 30, 100},
+                       {-1, 0, 50, -1, -1},
+                       {-1, -1, 0, -1, 10},
+                       {-1, -1, 20, 0, 60},
+                       {-1, -1, -1, -1, 0}};
+
+    int * p[5];
+    for (int i = 0; i < 5; i++)
+    {
+        p[i] = graph[i];
+    }
     
+    std::cout << dijkstra(p, 5);
+    return 0;
 }
