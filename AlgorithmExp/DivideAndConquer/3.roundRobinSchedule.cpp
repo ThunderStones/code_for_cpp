@@ -49,11 +49,19 @@ inline int ** createTable(int size) {
 }
 
 void print(int ** table, int size) {
+    printf(" Day ");
+    for (int i = 1; i < size; i++)
+    {
+        printf("%3d", i);
+    }
+    cout << endl;
+    
     for (int i = 0; i < size; i++)
     {
-        for (int j = 0; j < size; j++)
+        printf("%4d|", i + 1);
+        for (int j = 1; j < size; j++)
         {
-            cout << table[i][j] << " ";
+            printf("%3d",  table[i][j] + 1);
         }
         cout << endl;
     }

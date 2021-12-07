@@ -1,9 +1,10 @@
 #include <iostream>
+using namespace std;
 
-int dijkstra(int **matrix, int size)
+int * dijkstra(int **matrix, int size)
 {
     int red[size] = {0}, blue[size] = {0};
-    int distance[size], parent[size];
+    int * distance = new int[size], parent[size];
 
     // init
     red[0] = 1;
@@ -43,6 +44,7 @@ int dijkstra(int **matrix, int size)
                 }
         }
     }
+    return distance;
 }
 
 int main(int argc, char const *argv[])
@@ -58,7 +60,12 @@ int main(int argc, char const *argv[])
     {
         p[i] = graph[i];
     }
+    int * res = new int[5];
+    res = dijkstra(p, 5);
+    for (size_t i = 0; i < 5; i++)
+    {
+        cout << res[i] << ' ';
+    }
     
-    std::cout << dijkstra(p, 5);
     return 0;
 }
