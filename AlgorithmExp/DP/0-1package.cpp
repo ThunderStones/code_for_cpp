@@ -36,7 +36,6 @@ int knapSack(int *v, int *w, int packageSize, int count, int **m)
 
 int main(int argc, char const *argv[])
 {
-    cout << 1;
     int **m = new int *[6];
     for (size_t i = 0; i < 6; i++)
     {
