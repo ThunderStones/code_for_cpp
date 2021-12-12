@@ -22,7 +22,7 @@ int knapSack(int *v, int *w, int packageSize, int count, int **m)
     for (size_t i = count - 1; i >= 1; i--)
     {
         jMax = min(w[i], packageSize);
-        for (size_t j = 1; j < jMax; i++)
+        for (size_t j = 1; j < jMax; j++)
         {
             m[i][j] = m[i + 1][j];
         }
@@ -39,11 +39,11 @@ int main(int argc, char const *argv[])
     int **m = new int *[6];
     for (size_t i = 0; i < 6; i++)
     {
-        m[i] = new int[6];
+        m[i] = new int[11];
     }
     int w[6] = {0, 2, 2, 6, 5, 4};
     int v[6] = {0, 6, 3, 5, 4, 6};
-    cout << knapSack(v, w, 5, 10, m) << endl;
+    cout << knapSack(v, w, 10, 5, m) << endl;
     for (size_t i = 1; i < 6; i++)
     {
         for (size_t j = 1; j < 6; j++)
