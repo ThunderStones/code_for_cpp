@@ -25,6 +25,7 @@ void mergeSort(int arr[], int left, int right, int temp[])
 int main(int argc, char const *argv[])
 {
     int data[10] = {85,66,9,55,2,65,43,26,22,3}, temp[10];
+    std::cout << "原数据: 85 66 9 55 2 65 43 26 22 3" << std::endl << "排序后: ";
     mergeSort(data, 0, 9, temp);
     for (size_t i = 0; i < 10; i++)
     {

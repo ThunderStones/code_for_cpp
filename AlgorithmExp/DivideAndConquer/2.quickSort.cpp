@@ -12,25 +12,28 @@ void quickSort(int arr[], int low, int high)
     {
         while (i < j && arr[j] >= key)
             j--;
-        if (i < j) arr[i] = arr[j];
+        if (i < j)
+            arr[i] = arr[j];
         while (i < j && arr[i] < key)
             i++;
-        if (i < j) arr[j] = arr[i];
+        if (i < j)
+            arr[j] = arr[i];
     }
     arr[i] = key;
     quickSort(arr, low, i - 1);
     quickSort(arr, i + 1, high);
 }
 
-
 int main(int argc, char const *argv[])
 {
-    int data[10] = {85,66,9,55,2,65,43,26,22,3};
+    int data[10] = {85, 66, 9, 55, 2, 65, 43, 26, 22, 3};
+    std::cout << "原数据: 85 66 9 55 2 65 43 26 22 3" << std::endl
+              << "排序后: ";
     quickSort(data, 0, 9);
     for (size_t i = 0; i < 10; i++)
     {
         std::cout << data[i] << ' ';
     }
-    
+
     return 0;
 }

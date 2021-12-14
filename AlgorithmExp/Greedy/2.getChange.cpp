@@ -34,11 +34,27 @@ void getChange(int n, int res[4])
 int main(int argc, char const *argv[])
 {
     int res[5];
-    getChange(952, res);
+    std::cout << "需要找零的数目：47" << std::endl;
+    getChange(47, res);
     for (size_t i = 0; i < 4; i++)
     {
-        std::cout << res[i] << ' ';
+        switch (i)
+        {
+        case 0:
+            std::cout << "2角5分：" << res[i] << std::endl;
+
+            break;
+        case 1:
+            std::cout << "1角：" << res[i] << std::endl;
+            break;
+        case 2:
+            std::cout << "5分：" << res[i] << std::endl;
+            break;
+        case 3:
+            std::cout << "1分：" << res[i] << std::endl;
+            break;
+        }
     }
-    
+
     return 0;
 }

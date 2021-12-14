@@ -1,10 +1,10 @@
 #include <iostream>
 using namespace std;
 
-int * dijkstra(int **matrix, int size)
+int *dijkstra(int **matrix, int size)
 {
     int red[size] = {0}, blue[size] = {0};
-    int * distance = new int[size], parent[size];
+    int *distance = new int[size], parent[size];
 
     // init
     red[0] = 1;
@@ -23,7 +23,7 @@ int * dijkstra(int **matrix, int size)
     //
     for (int i = 1; i < size; i++)
     {
-        //find min distance in blue set
+        // find min distance in blue set
         int min;
         for (int j = 0; j < size; j++)
         {
@@ -32,9 +32,8 @@ int * dijkstra(int **matrix, int size)
                 min = j;
                 break;
             }
-            
         }
-        
+
         for (int j = min; j < size; j++)
             if (blue[j] == 1 && distance[j] != -1 && distance[j] < distance[min])
                 min = j;
@@ -43,7 +42,7 @@ int * dijkstra(int **matrix, int size)
         red[min] = 1;
         blue[min] = 0;
 
-        //relax
+        // relax
         for (int j = 1; j < size; j++)
         {
             if (matrix[min][j] != -1 && min != j)
@@ -65,17 +64,18 @@ int main(int argc, char const *argv[])
                        {-1, -1, 20, 0, 60},
                        {-1, -1, -1, -1, 0}};
 
-    int * p[5];
+    int *p[5];
     for (int i = 0; i < 5; i++)
     {
         p[i] = graph[i];
     }
-    int * res = new int[5];
+    int *res = new int[5];
     res = dijkstra(p, 5);
-    for (size_t i = 0; i < 5; i++)
+    cout << "从0到各点的最短路径为：" << endl;
+    for (size_t i = 1; i < 5; i++)
     {
         cout << res[i] << ' ';
     }
-    
+
     return 0;
 }

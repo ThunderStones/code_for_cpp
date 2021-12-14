@@ -34,6 +34,7 @@ int *LIS(int data[], int size, bool flag)
 
 int main(int argc, char const *argv[])
 {
+    std::cout << "身高数据 = {186, 186, 150, 200, 160, 130, 197, 220}" << std::endl;
     int date[] = {186, 186, 150, 200, 160, 130, 197, 220};
     int *a = LIS(date, 8, true);
     int *b = LIS(date, 8, false);
@@ -45,6 +46,6 @@ int main(int argc, char const *argv[])
             max = a[i] + b[i];
         }
     }
-    std::cout << max;
+    std::cout << "最少出列人数 = " << 8 - max + 1;
     return 0;
 }

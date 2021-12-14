@@ -13,7 +13,6 @@ public:
     int totalTime;
 
     JobSchedule(int, int **);
-    ~JobSchedule();
     void backTrack(int i);
     void swap(int i, int j);
     void printResult();
@@ -33,10 +32,6 @@ JobSchedule::JobSchedule(int n, int **time)
         result[i] = i;
         f2[i] = 0;
     }
-}
-
-JobSchedule::~JobSchedule()
-{
 }
 
 void JobSchedule::swap(int i, int j)
@@ -76,7 +71,8 @@ void JobSchedule::backTrack(int i)
 
 void JobSchedule::printResult()
 {
-    cout << bestTime << endl;
+    cout << "当前搜索到的最优时间" << bestTime << endl
+         << "顺序";
     for (int i = 0; i < jobCount; i++)
     {
         cout << result[i] << ' ';

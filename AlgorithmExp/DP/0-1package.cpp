@@ -47,6 +47,7 @@ int main(int argc, char const *argv[])
             m[i][j] == 0;
     int w[6] = {0, 2, 2, 6, 5, 4};
     int v[6] = {0, 6, 3, 5, 4, 6};
+    cout << "w = {2,2,6,5,4}" << endl << "v = {6,3,5,4,6}" << endl << "max = ";
     cout << knapSack(v, w, 10, 5, m) << endl;
     for (size_t i = 1; i < 6; i++)
     {

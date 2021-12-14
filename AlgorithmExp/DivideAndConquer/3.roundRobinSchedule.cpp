@@ -75,6 +75,7 @@ void print(int **table, int size)
 int main(int argc, char const *argv[])
 {
     int k;
+    cout << "K = ";
     cin >> k;
     int **table = createTable(pow2(k));
 
