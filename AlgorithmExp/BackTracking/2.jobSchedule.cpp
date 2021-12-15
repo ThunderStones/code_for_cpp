@@ -82,18 +82,24 @@ void JobSchedule::printResult()
 
 int main(int argc, char const *argv[])
 {
+    int jobCount;
+    cout << "作业数：";
+    cin >> jobCount;
     int **time = new int *[3];
+    cout << "      机器1  机器2\n";
     for (int i = 0; i < 3; i++)
     {
+        cout << "作业" << i + 1 << ':';
         time[i] = new int[2];
+        cin >> time[i][0] >> time[i][1];
     }
-    time[0][0] = 2;
-    time[0][1] = 1;
-    time[1][0] = 3;
-    time[1][1] = 1;
-    time[2][0] = 2;
-    time[2][1] = 3;
-    JobSchedule jobSchedule(3, (int **)time);
+    // time[0][0] = 2;
+    // time[0][1] = 1;
+    // time[1][0] = 3;
+    // time[1][1] = 1;
+    // time[2][0] = 2;
+    // time[2][1] = 3;
+    JobSchedule jobSchedule(jobCount, (int **)time);
     jobSchedule.backTrack(0);
 
     return 0;

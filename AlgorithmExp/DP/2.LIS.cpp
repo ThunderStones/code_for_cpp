@@ -35,9 +35,9 @@ int *LIS(int data[], int size, bool flag)
 int main(int argc, char const *argv[])
 {
     std::cout << "身高数据 = {186, 186, 150, 200, 160, 130, 197, 220}" << std::endl;
-    int date[] = {186, 186, 150, 200, 160, 130, 197, 220};
-    int *a = LIS(date, 8, true);
-    int *b = LIS(date, 8, false);
+    int data[] = {186, 186, 150, 200, 160, 130, 197, 220};
+    int *a = LIS(data, 8, true);
+    int *b = LIS(data, 8, false);
     int max = 1;
     for (int i = 0; i < 8; i++)
     {
